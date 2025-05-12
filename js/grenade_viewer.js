@@ -5,7 +5,7 @@ let subFilterContainer = null;
 let subFilter = "";
 
 // Загружаем JSON из корня сайта
-fetch('/grenades.json')
+fetch('../grenades.json')
   .then(res => {
     if (!res.ok) throw new Error('Не удалось загрузить grenades.json');
     return res.json();
