@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mirage — CS Helper</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-button" href="../index.html">← Назад</a>
+    <h1>mirage</h1>
+
+    <div class="team-filter">
+      <input type="radio" id="team-t" name="team" value="T" checked>
+      <label for="team-t">T Side</label>
+      <input type="radio" id="team-ct" name="team" value="CT">
+      <label for="team-ct">CT Side</label>
+    </div>
+
+    <div class="nade-filter">
+      <input type="radio" id="nade-smoke" name="nade" value="smoke" checked>
+      <label for="nade-smoke">Smoke</label>
+      <input type="radio" id="nade-flash" name="nade" value="flash">
+      <label for="nade-flash">Flash</label>
+      <input type="radio" id="nade-he" name="nade" value="he">
+      <label for="nade-he">HE</label>
+      <input type="radio" id="nade-molotov" name="nade" value="molotov">
+      <label for="nade-molotov">Molotov</label>
+    </div>
+
+    <div id="nade-grid" class="nade-grid"></div>
+  </div>
+
+  <div id="popup-overlay" class="popup-overlay" style="display:none">
+  <div class="popup">
+    <span class="popup-close" id="popup-close">×</span>
+
+    <div class="popup-section">
+      <h2>Видео</h2>
+      <div class="video-wrapper">
+        <video id="popup-video" controls></video>
+      </div>
+    </div>
+
+    <div class="popup-section">
+      <div class="popup-row">
+        <div>
+          <h2>Позиционирование</h2>
+          <div class="img-wrapper">
+            <img id="popup-position" src="" alt="Позиционирование" />
+          </div>
+        </div>
+        <div>
+          <h2>Наведение</h2>
+          <div class="aim-wrapper">
+            <img id="popup-aim" src="" alt="Наведение" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="popup-section tags">
+  <span id="popup-tag-position"></span>
+  <span id="popup-tag-throw"></span>
+  <span id="popup-tag-note"></span>
+</div>
+
+
+
+  <script>
+    const currentMap = "mirage";
+  </script>
+  <script src="../js/grenade_viewer.js"></script>
+</body>
+</html>

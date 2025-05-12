@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>CS Helper Admin</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-button" href="../index.html">← Назад</a>
+    <h1>Добавить новую гранату</h1>
+    <form id="nade-form">
+      <select name="map" required>
+        <option value="">Карта</option>
+        <option value="mirage">mirage</option>
+        <option value="dust2">dust2</option>
+        <option value="inferno">inferno</option>
+        <option value="ancient">ancient</option>
+        <option value="anubis">anubis</option>
+        <option value="nuke">nuke</option>
+        <option value="train">train</option>
+      </select><br>
+      <select name="team" required>
+        <option value="">Сторона</option>
+        <option value="T">T</option>
+        <option value="CT">CT</option>
+      </select><br>
+      <select name="type" required>
+        <option value="">Тип гранаты</option>
+        <option value="smoke">Smoke</option>
+        <option value="flash">Flash</option>
+        <option value="he">HE</option>
+        <option value="molotov">Molotov</option>
+      </select><br>
+      <input type="text" name="subtype" placeholder="Кастомный фильтр (необязательно)"><br>
+      <input type="text" name="title" placeholder="Название" required><br>
+      <input type="text" name="image" placeholder="Ссылка на изображение / гифку" required><br>
+      <button type="submit">Добавить</button>
+    </form>
+    <pre id="output" style="margin-top:2rem; white-space:pre-wrap;"></pre>
+  </div>
+
+  <script>
+    const form = document.getElementById('nade-form');
+    const output = document.getElementById('output');
+    const grenades = [];
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (!data.subtype) delete data.subtype;
+      grenades.push(data);
+      output.textContent = JSON.stringify(grenades, null, 2);
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>dust2 — CS Helper</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-button" href="../index.html">← Назад</a>
+    <h1>dust2</h1>
+
+    <div class="team-filter">
+      <input type="radio" id="team-t" name="team" value="T" checked>
+      <label for="team-t">T Side</label>
+      <input type="radio" id="team-ct" name="team" value="CT">
+      <label for="team-ct">CT Side</label>
+    </div>
+
+    <div class="nade-filter">
+      <input type="radio" id="nade-smoke" name="nade" value="smoke" checked>
+      <label for="nade-smoke">Smoke</label>
+      <input type="radio" id="nade-flash" name="nade" value="flash">
+      <label for="nade-flash">Flash</label>
+      <input type="radio" id="nade-he" name="nade" value="he">
+      <label for="nade-he">HE</label>
+      <input type="radio" id="nade-molotov" name="nade" value="molotov">
+      <label for="nade-molotov">Molotov</label>
+    </div>
+
+    <div id="nade-grid" class="nade-grid"></div>
+  </div>
+
+  <script>
+    const currentMap = "dust2";
+  </script>
+  <script src="../js/grenade_viewer.js"></script>
+</body>
+</html>

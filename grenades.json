@@ -1,0 +1,40 @@
+[
+  {
+  "map": "mirage",
+  "team": "T",
+  "type": "smoke",
+  "title": "Jungle Smoke",
+  "video": "https://default-grenades-dev.s3.eu-central-1.amazonaws.com/video/smoke/eb5efed0-44cc-45a7-a885-56f25138cf3e.webm",
+  "positioning": "https://default-grenades-dev.s3.eu-central-1.amazonaws.com/images/smoke/5909509c-2593-4e4c-8a5c-78de4b614d91.jpg",
+  "aim": "https://default-grenades-dev.s3.eu-central-1.amazonaws.com/images/smoke/6eefae8b-e76a-420e-b09e-e655176e7a12.jpg",
+  "tags": {
+    "position": "T spawn",
+    "throw": "на прыжке",
+    "note": "не палится"
+  },
+  "preview": "https://example.com/thumb.gif"
+  },
+  {
+    "map": "mirage",
+    "team": "CT",
+    "type": "flash",
+    "title": "B Short Flash",
+    "image": "https://i.imgur.com/w3duR07.gif"
+  },
+  {
+    "map": "mirage",
+    "team": "T",
+    "type": "smoke",
+    "subtype": "Инста",
+    "title": "Окно",
+    "image": "https://i.imgur.com/w3duR07.gif"
+  },
+  {
+    "map": "mirage",
+    "team": "T",
+    "type": "smoke",
+    "subtype": "Пистолетка",
+    "title": "Темка",
+    "image": "https://i.imgur.com/w3duR07.gif"
+  }
+]
